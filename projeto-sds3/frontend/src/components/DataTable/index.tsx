@@ -1,6 +1,7 @@
 import { formatLocalDate } from "../../utils/format";
 import { BASE_URL } from "../../utils/request";
 import axios from "axios";
+import Pagination from "components/Pagination";
 import { useState, useEffect } from "react";
 import { SalePage } from "types/sale";
 
@@ -29,6 +30,8 @@ const DataTable = () => {
 
   return (
     <>
+
+      <Pagination page={page} onPageChange={changePage} />
 
       <div className="table-responsive">
 
